@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EvieSkin - Radiant Natural Skincare</title>
-    <link rel="stylesheet" href="style.css ">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
         <a href="#" class="logo">EVIESKIN</a>
+        <span class="hamburger" onclick="toggleMenu()">&#9776;</span>
         <div class="nav-links">
+            <a href="#products">Products</a>
             <a href="#">Home</a>
             <a href="#">Gentle Cleanser</a>
             <a href="#">Facial Toner</a>
             <a href="#">Facial Serum</a>
-            <a href="#">Contact</a>
+            <a href="#footer-container">Contact</a>
         </div>
     </nav>
 
@@ -26,7 +28,8 @@
             <button class="cta-button">Shop Now</button>
         </div>
         <div class="image-container">
-            <img src="https://res.cloudinary.com/dy5u1ccgi/image/upload/v1746774153/_DSC1182-Enhanced-NR_vkxiqa.jpg" alt="Product 1">
+            <img src="https://res.cloudinary.com/dy5u1ccgi/image/upload/v1746774153/_DSC1182-Enhanced-NR_vkxiqa.jpg" alt="Hero Image">
+            <img src="https://res.cloudinary.com/dy5u1ccgi/image/upload/v1746780852/_DSC1301-Enhanced-NR_1_yqszor.jpg" alt="Product 1">
             <img src="https://res.cloudinary.com/dy5u1ccgi/image/upload/v1746777005/_DSC1318-Enhanced-NR_kkxwlq.jpg" alt="Product 2">
             <img src="https://res.cloudinary.com/dy5u1ccgi/image/upload/v1746780492/_DSC1225-Enhanced-NR_detii6.jpg" alt="Product 3">
         </div>
@@ -50,25 +53,55 @@
         </div>
     </section>
 
-        <!-- Add this new section after the hero section and before features -->
-    <section class="products">
+    <section id="products" class="products">
         <h2>Our Products</h2>
         <div class="products-container">
             <div class="product-card">
-                <img src="https://res.cloudinary.com/dy5u1ccgi/image/upload/v1746777005/_DSC1318-Enhanced-NR_kkxwlq.jpg" alt="Product 1">
-                <h3>Evie Skin Facial Serum</h3>
-                <p>Evie Skin Facial Toner is formulated to gently remove residual impurities, rebalance the skin’s pH, and prepare the skin for better absorption of moisturizers and serums. Enriched with skin-soothing ingredients, it helps refresh, hydrate, and refine the appearance of pores, leaving your skin clean, soft, and revitalized.</p>
+                <img src="https://res.cloudinary.com/dy5u1ccgi/image/upload/v1746777005/_DSC1318-Enhanced-NR_kkxwlq.jpg" alt="Facial Serum">
+                <div class="product-info">
+                    <h3>Evie Skin Facial Serum</h3>
+                    <p>Evie Skin Facial Toner is formulated to gently remove residual impurities, rebalance the skin’s pH, and prepare the skin for better absorption of moisturizers and serums. Enriched with skin-soothing ingredients, it helps refresh, hydrate, and refine the appearance of pores, leaving your skin clean, soft, and revitalized.</p>
+                </div>
             </div>
             <div class="product-card">
-                <img src="https://res.cloudinary.com/dy5u1ccgi/image/upload/v1746780492/_DSC1225-Enhanced-NR_detii6.jpg" alt="Product 2">
-                <h3>Evie Skin Gentle Cleanser</h3>
-                <p>gentle facial cleanser is to cleanse the skin by removing dirt, oil, and impurities without stripping away natural moisture or irritating the skin. It is typically formulated for daily use, especially for sensitive, dry, or normal skin types, and helps maintain a healthy skin barrier.</p>
+                <img src="https://res.cloudinary.com/dy5u1ccgi/image/upload/v1746780492/_DSC1225-Enhanced-NR_detii6.jpg" alt="Gentle Cleanser">
+                <div class="product-info">
+                    <h3>Evie Skin Gentle Cleanser</h3>
+                    <p>Gentle facial cleanser formulated to remove impurities without stripping natural moisture. Ideal for daily use, especially for sensitive, dry, or normal skin types. Helps maintain a healthy skin barrier with its nourishing formula.</p>
+                </div>
             </div>
             <div class="product-card">
-                <img src="https://res.cloudinary.com/dy5u1ccgi/image/upload/v1746780852/_DSC1301-Enhanced-NR_1_yqszor.jpg   " alt="Product 3">
-                <h3>Evie Skin Facial Toner</h3>
-                <p>Alpha Arbutin + Niacinamide + Hyaluronic AcidEvie Skin Facial Toner is formulated to gently remove residual impurities, rebalance the skin’s pH, and prepare the skin for better absorption of moisturizers and serums. Enriched with skin-soothing ingredients, it helps refresh, hydrate, and refine the appearance of pores, leaving your skin clean, soft, and revitalized.
-                </p>
-</section>
+                <img src="https://res.cloudinary.com/dy5u1ccgi/image/upload/v1746780852/_DSC1301-Enhanced-NR_1_yqszor.jpg" alt="Facial Toner">
+                <div class="product-info">
+                    <h3>Evie Skin Facial Toner</h3>
+                    <p>Alpha Arbutin + Niacinamide + Hyaluronic Acid formula to refresh and hydrate skin. Prepares skin for better absorption of moisturizers while refining pore appearance and maintaining optimal pH balance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <p>Follow us on:</p>
+            <div class="social-links">
+                <a href="https://www.tiktok.com" target="_blank" class="social-icon">
+                    <i class="fab fa-tiktok"></i> TikTok
+                </a>
+                <a href="https://shopee.com" target="_blank" class="social-icon">
+                    <i class="fas fa-shopping-bag"></i> Shopee
+                </a>
+                <a href="https://www.lazada.com" target="_blank" class="social-icon">
+                    <i class="fas fa-store"></i> Lazada
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
