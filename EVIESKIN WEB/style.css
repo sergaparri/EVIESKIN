@@ -32,11 +32,25 @@ nav {
     text-decoration: none;
 }
 
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--accent-color);
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    transition: max-height 0.3s ease-in-out;
+}
+
 .nav-links a {
-    margin-left: 30px;
     text-decoration: none;
     color: var(--text-color);
-    font-weight: 500;
+    font-weight: bolder;
     transition: color 0.3s;
 }
 
@@ -71,26 +85,27 @@ nav {
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out; /* Smooth transition */
     border-radius: 20px;
 }
 
 .image-container img:nth-child(1) {
-    animation: slideShow 6s infinite 0s; /* Total duration is 6s, each image shows for 2s */
+    animation: slideShow 9s infinite 0s;
 }
 
 .image-container img:nth-child(2) {
-    animation: slideShow 6s infinite 2s; /* Starts after 2s */
+    animation: slideShow 9s infinite 3s;
 }
 
 .image-container img:nth-child(3) {
-    animation: slideShow 6s infinite 4s; /* Starts after 4s */
+    animation: slideShow 9s infinite 6s;
 }
 
 @keyframes slideShow {
     0% { opacity: 0; }
-    33% { opacity: 1; } /* Each image is visible for 2 seconds */
-    66% { opacity: 0; }
+    10% { opacity: 1; }
+    30% { opacity: 1; }
+    40% { opacity: 0; }
     100% { opacity: 0; }
 }
 
@@ -108,12 +123,6 @@ nav {
     color: var(--text-color);
     margin-bottom: 20px;
     line-height: 1.2;
-}
-
-.hero-content p {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 30px;
 }
 
 .cta-button {
@@ -142,11 +151,12 @@ nav {
 
 .feature-card {
     text-align: center;
-    padding: 30px;
+    padding: 40px; /* Increased padding for more spacing */
     border-radius: 15px;
     transition: transform 0.3s;
     background-color: #fff;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    min-height: 300px; /* Increased height for more vertical space */
 }
 
 .feature-card:hover {
@@ -154,16 +164,25 @@ nav {
 }
 
 .feature-card i {
-    font-size: 40px;
+    font-size: 50px; /* Increased icon size */
     color: var(--accent-color);
     margin-bottom: 20px;
 }
 
 .feature-card h3 {
+    font-size: 1.8rem; /* Increased font size for the title */
+    font-weight: 700;
+    color: #333;
     margin-bottom: 15px;
-    color: var(--text-color);
 }
-/* Products Section */
+
+.feature-card p {
+    font-size: 1.2rem; /* Increased font size for the description */
+    color: #555;
+    line-height: 1.8; /* Improved readability */
+    margin: 0;
+}
+
 .products {
     padding: 60px 8%;
     background-color: var(--secondary-color);
@@ -173,83 +192,163 @@ nav {
     font-size: 32px;
     margin-bottom: 40px;
     color: var(--text-color);
+    text-align: center;
 }
 
 .products-container {
-    display: flex;
-    overflow-x: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    padding-bottom: 20px;
-    scrollbar-width: thin;
-    scrollbar-color: var(--accent-color) var(--secondary-color);
-}
-
-.products-container::-webkit-scrollbar {
-    height: 8px;
-}
-
-.products-container::-webkit-scrollbar-track {
-    background: var(--secondary-color);
-}
-
-.products-container::-webkit-scrollbar-thumb {
-    background-color: var(--accent-color);
-    border-radius: 20px;
+    padding: 20px 0;
 }
 
 .product-card {
-    min-width: 250px; /* Decreased width */
-    height: 400px; /* Increased height */
-    background: #FFF0F5;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    background: #FFF0F5; /* Clean white background */
+    border: 1px solid #FFF0F5   ; /* Subtle border for minimalistic look */
+    border-radius: 10px; /* Slightly rounded corners */
+    padding: 15px;
+    box-shadow: none; /* Remove heavy shadow */
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .product-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px); /* Subtle hover effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow on hover */
 }
 
 .product-card img {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.product-card h3 {
-    font-size: 18px;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image fills the card */
+    border-radius: 8px; /* Match the card's rounded corners */
     margin-bottom: 10px;
 }
 
-.product-card p {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 8px;
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Add spacing between elements */
 }
 
-.price {
-    display: block;
-    font-weight: 600;
+.product-info h3 {
+    font-size: 1.9rem; /* Increased font size for the title */
+    font-weight: 700; /* Make the title bolder */
+    color: #333; /* Darker text for better readability */
+    margin: 0;
+}
+
+.product-info p {
+    font-size: 1.3rem; /* Increased font size for descriptions */
+    color: #555; /* Slightly darker text color */
+    line-height: 1.8; /* Improved line spacing for readability */
+    margin: 0;
+    overflow: visible; /* Ensure all text is displayed */
+    text-overflow: unset; /* Remove ellipsis */
+    display: block; /* Ensure full text is shown */
+}
+
+footer {
+    background-color: #FFF0F5;
+    padding: 60px 10%; /* Increased padding for better spacing */
+    text-align: center;
+    border-top: 2px solid #e0e0e0; /* Slightly thicker border for emphasis */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-container p {
+    font-size: 1.5rem; /* Larger font size for better visibility */
+    color: #333;
+    margin-bottom: 30px; /* Added more spacing */
+    font-weight: 700; /* Bolder text for emphasis */
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Increased gap for better spacing */
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.social-links a {
+    text-decoration: none;
     color: var(--accent-color);
-    font-size: 16px;
+    font-size: 1.5rem; /* Larger font size for links */
+    font-weight: 600;
+    transition: color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Space between icon and text */
 }
 
+.social-links a:hover {
+    color: #FF69B4; /* Brighter hover color */
+    transform: scale(1.2); /* Slightly larger zoom effect on hover */
+}
+
+.social-links i {
+    font-size: 2rem; /* Larger icons for better visibility */
+}
+
+/* Responsive Footer */
 @media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        padding-top: 100px;
-        text-align: center;
+    .footer-container p {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
     }
 
-    .hero-content {
-        padding-right: 0;
-        margin-bottom: 50px;
+    .social-links a {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+
+    .social-links i {
+        font-size: 1.8rem; /* Adjust icon size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .social-links {
+        flex-direction: column; /* Stack links vertically on very small screens */
+        gap: 25px;
+    }
+
+    .footer-container p {
+        font-size: 1rem; /* Smaller font size for very small screens */
+    }
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
     }
 
     .nav-links {
         display: none;
+        flex-direction: column;
+        background-color: #FFF0F5;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.show {
+        display: flex;
+        max-height: 300px; /* Adjust based on content */
+    }
+
+    .nav-links a {
+        padding: 10px 20px;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
     }
 }
