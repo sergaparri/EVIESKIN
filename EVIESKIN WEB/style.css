@@ -6,10 +6,10 @@
 }
 
 :root {
-    --primary-color: #FFB6C1;
-    --secondary-color: #FFF0F5;
-    --accent-color: #000000;
-    --text-color: #333;
+    --primary-color: #ffffff; /* White background */
+    --secondary-color: #ffffff; /* White background */
+    --accent-color: #000000; /* Accent color remains black */
+    --text-color: #333; /* Text color remains dark gray */
 }
 
 nav {
@@ -17,7 +17,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: #ffffff; /* White background for navigation */
     position: fixed;
     width: 100%;
     top: 0;
@@ -26,25 +26,40 @@ nav {
 }
 
 .logo {
-    font-size: 28px;
-    font-weight: 700;
     color: var(--accent-color);
     text-decoration: none;
 }
 
+.logo img {
+    height: 150PX; /* Adjust the height as needed */
+    width: 200PX; /* Maintain aspect ratio */
+    display: block;
+}
+
 /* Hamburger Icon */
 .hamburger {
-    display: none;
+    display: none; /* Hidden by default */
     font-size: 2rem;
     cursor: pointer;
     color: var(--accent-color);
+    z-index: 1100; /* Ensure it appears above other elements */
+    position: relative; /* Optional for better positioning */
+}
+
+/* Show Hamburger Icon on Small Screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show the hamburger icon on small screens */
+    }
 }
 
 /* Navigation Links */
 .nav-links {
+    font-size: 1.5rem;
     display: flex;
     gap: 20px;
     transition: max-height 0.3s ease-in-out;
+    background-color: #ffffff; /* White background for navigation dropdown */
 }
 
 .nav-links a {
@@ -66,6 +81,7 @@ nav {
     padding: 0 8%;
     margin-top: 60px;
     position: relative;
+    background-color: #ffffff; /* White background for hero section */
 }
 
 .image-container {
@@ -138,7 +154,7 @@ nav {
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .features {
@@ -146,7 +162,7 @@ nav {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 40px;
-    background-color: #FFF0F5;
+    background-color: #ffffff; /* White background for features section */
 }
 
 .feature-card {
@@ -154,7 +170,7 @@ nav {
     padding: 40px; /* Increased padding for more spacing */
     border-radius: 15px;
     transition: transform 0.3s;
-    background-color: #fff;
+    background-color: #ffffff;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     min-height: 300px; /* Increased height for more vertical space */
 }
@@ -185,7 +201,7 @@ nav {
 
 .products {
     padding: 60px 8%;
-    background-color: var(--secondary-color);
+    background-color: #ffffff; /* White background for products section */
 }
 
 .products h2 {
@@ -203,7 +219,7 @@ nav {
 }
 
 .product-card {
-    background: #FFF0F5; /* Clean white background */
+    background: #ffffff; /* Clean white background */
     border: 1px solid #FFF0F5   ; /* Subtle border for minimalistic look */
     border-radius: 10px; /* Slightly rounded corners */
     padding: 15px;
@@ -248,7 +264,7 @@ nav {
 }
 
 footer {
-    background-color: #FFF0F5;
+    background-color: #ffffff; /* White background for footer */
     padding: 60px 10%; /* Increased padding for better spacing */
     text-align: center;
     border-top: 2px solid #e0e0e0; /* Slightly thicker border for emphasis */
@@ -333,14 +349,14 @@ footer {
         top: 60px;
         right: 0;
         width: 100%;
-        max-height: 0;
-        overflow: hidden;
+        max-height: 300px; /* Adjust based on content */
+        overflow-y: auto; /* Enable scrolling for long menus */
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 
     .nav-links.show {
         display: flex;
-        max-height: 300px; /* Adjust based on content */
+        max-height: 80vh; /* Limit height to 80% of the viewport */
     }
 
     .nav-links a {
@@ -351,4 +367,145 @@ footer {
     .nav-links a:last-child {
         border-bottom: none;
     }
+}
+
+.gentle-cleanser {
+    padding: 60px 8%;
+    background-color: #ffffff; /* White background for gentle cleanser section */
+    text-align: center;
+}
+
+.gentle-cleanser h2 {
+    font-size: 3rem;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+.gentle-cleanser-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.gentle-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gentle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gentle-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.gentle-card p {
+    font-size: 1.2rem; /* Increased font size for better readability */
+    color: #555;
+    line-height: 1.8; /* Improved line spacing */
+}
+
+.facial-toner {
+    padding: 60px 8%;
+    background-color: #ffffff; /* White background for minimalistic design */
+    text-align: center;
+}
+
+.facial-toner h2 {
+    font-size: 2.5rem;
+    color: var(--text-color); /* Use the global text color */
+    margin-bottom: 30px;
+}
+
+.facial-toner-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.facial-card {
+    background: #ffffff; /* Minimalistic white background */
+    border: 1px solid #e0e0e0; /* Subtle border for a clean look */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.facial-card:hover {
+    transform: translateY(-5px); /* Subtle hover effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+}
+
+.facial-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for the image */
+    margin-bottom: 15px;
+}
+
+.facial-card p {
+    font-size: 1.2rem; /* Readable font size */
+    color: #555; /* Neutral text color */
+    line-height: 1.8; /* Improved readability */
+}
+
+.facial-serum {
+    padding: 60px 8%;
+    background-color: #ffffff; /* Minimalistic white background */
+    text-align: center;
+}
+
+.facial-serum h2 {
+    font-size: 2.5rem;
+    color: var(--text-color); /* Use the global text color */
+    margin-bottom: 30px;
+}
+
+.facial-serum-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.facial-card {
+    background: #ffffff; /* Minimalistic white background */
+    border: 1px solid #e0e0e0; /* Subtle border for a clean look */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.facial-card:hover {
+    transform: translateY(-5px); /* Subtle hover effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+}
+
+.facial-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for the image */
+    margin-bottom: 15px;
+}
+
+.facial-card p {
+    font-size: 1.2rem; /* Readable font size */
+    color: #555; /* Neutral text color */
+    line-height: 1.8; /* Improved readability */
 }
