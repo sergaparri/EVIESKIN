@@ -344,7 +344,7 @@ footer {
     .nav-links {
         display: none;
         flex-direction: column;
-        background-color: #FFF0F5;
+        background-color: #ffffff;
         position: absolute;
         top: 60px;
         right: 0;
@@ -508,4 +508,24 @@ footer {
     font-size: 1.2rem; /* Readable font size */
     color: #555; /* Neutral text color */
     line-height: 1.8; /* Improved readability */
+}
+
+.contact-info {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #333; /* Neutral text color */
+    text-align: center;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between icon and text */
+}
+
+.contact-info i {
+    font-size: 1.5rem; /* Icon size */
+    color: var(--accent-color); /* Icon color */
 }
