@@ -24,6 +24,39 @@ nav {
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+.nav-links a {
+    font-size: 1.2rem; /* Adjusted font size for navigation links */
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bolder;
+    position: relative; /* Required for the hover effect */
+    transition: color 0.3s ease-in-out;
+    padding: 0 15px; /* Add padding for spacing around the links */
+    border-left: 1px solid #e0e0e0; /* Add a vertical line */
+}
+
+.nav-links a:first-child {
+    border-left: none; /* Remove the line for the first link */
+}
+
+.nav-links a:hover {
+    color: var(--accent-color); /* Change text color on hover */
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position the underline slightly below the text */
+    width: 0;
+    height: 4px; /* Thickness of the underline */
+    background-color: var(--accent-color); /* Color of the underline */
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+    width: 100%; /* Expand the underline to full width on hover */
+}
 
 .logo {
     color: var(--accent-color);
@@ -55,7 +88,6 @@ nav {
 
 /* Navigation Links */
 .nav-links {
-    font-size: 1.5rem;
     display: flex;
     gap: 20px;
     transition: max-height 0.3s ease-in-out;
@@ -67,6 +99,7 @@ nav {
     color: var(--text-color);
     font-weight: bolder;
     transition: color 0.3s;
+    font-size: 1.5rem; /* Adjusted font size for navigation links */
 }
 
 .nav-links a:hover {
