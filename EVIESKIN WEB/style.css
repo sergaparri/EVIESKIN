@@ -264,78 +264,70 @@ nav {
 }
 
 footer {
-    background-color: #ffffff; /* White background for footer */
-    padding: 60px 10%; /* Increased padding for better spacing */
+    background-color: #000000; /* Minimalistic black background */
+    color: #ffffff; /* White text for contrast */
+    padding: 40px 8%;
     text-align: center;
     border-top: 2px solid #e0e0e0; /* Slightly thicker border for emphasis */
 }
 
 .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-container p {
-    font-size: 1.5rem; /* Larger font size for better visibility */
-    color: #333;
-    margin-bottom: 30px; /* Added more spacing */
-    font-weight: 700; /* Bolder text for emphasis */
-}
-
-.social-links {
     display: flex;
-    justify-content: center;
-    gap: 40px; /* Increased gap for better spacing */
-    flex-wrap: wrap; /* Ensures responsiveness */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
-.social-links a {
+.footer-container h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.social-links,
+.contact-info {
+    flex: 1;
+    min-width: 250px;
+}
+
+.social-links a,
+.contact-info p {
+    font-size: 1.2rem;
+    color: #ffffff;
     text-decoration: none;
-    color: var(--accent-color);
-    font-size: 1.5rem; /* Larger font size for links */
-    font-weight: 600;
-    transition: color 0.3s, transform 0.3s;
+    margin: 10px 0;
     display: flex;
     align-items: center;
-    gap: 12px; /* Space between icon and text */
+    justify-content: center;
+    gap: 10px;
 }
 
-.social-links a:hover {
-    color: #FF69B4; /* Brighter hover color */
-    transform: scale(1.2); /* Slightly larger zoom effect on hover */
+.social-links a:hover,
+.contact-info p:hover {
+    color: var(--accent-color); /* Add hover effect with accent color */
 }
 
-.social-links i {
-    font-size: 2rem; /* Larger icons for better visibility */
+.social-links i,
+.contact-info i {
+    font-size: 1.5rem;
+    color: var(--accent-color); /* Accent color for icons */
 }
 
-/* Responsive Footer */
+.footer-note {
+    flex-basis: 100%;
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #aaaaaa; /* Subtle text color for the footer note */
+}
+
 @media (max-width: 768px) {
-    .footer-container p {
-        font-size: 1.2rem; /* Adjust font size for smaller screens */
-    }
-
-    .social-links a {
-        font-size: 1.2rem; /* Adjust font size for smaller screens */
-    }
-
-    .social-links i {
-        font-size: 1.8rem; /* Adjust icon size for smaller screens */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
     }
 }
 
-@media (max-width: 480px) {
-    .social-links {
-        flex-direction: column; /* Stack links vertically on very small screens */
-        gap: 25px;
-    }
-
-    .footer-container p {
-        font-size: 1rem; /* Smaller font size for very small screens */
-    }
-}
-
-/* Responsive Navigation */
 @media (max-width: 768px) {
     .hamburger {
         display: block;
