@@ -16,7 +16,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    padding: 20px 50px; 
     background-color: #ffffff; /* White background for navigation */
     position: fixed;
     width: 100%;
@@ -54,7 +54,7 @@ nav {
     transition: width 0.3s ease-in-out;
 }
 
-.nav-links a:hover::after {
+.nav-links a:hover::after { 
     width: 100%; /* Expand the underline to full width on hover */
 }
 
@@ -353,6 +353,27 @@ footer {
     font-size: 1rem;
     color: #aaaaaa; /* Subtle text color for the footer note */
 }
+
+/* Social Links Hover: Brand Colors */
+.social-links a {
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-decoration: none;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: color 0.3s;
+}
+
+.social-links a .fa-tiktok { color: #fffafa; transition: color 0.3s; }
+.social-links a .fa-shopping-bag { color: #ee4d2d; transition: color 0.3s; }
+.social-links a .fa-store { color: #1a9cff; transition: color 0.3s; }
+
+.social-links a:hover .fa-tiktok { color: #69C9D0; }
+.social-links a:hover .fa-shopping-bag { color: #ee4d2d; }
+.social-links a:hover .fa-store { color: #1a9cff; }
 
 @media (max-width: 768px) {
     .footer-container {
