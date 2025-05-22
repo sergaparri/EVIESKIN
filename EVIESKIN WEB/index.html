@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/balgin" rel="stylesheet">
 </head>
 <body>
     <nav>
@@ -17,6 +18,7 @@
         <div class="nav-links">
             <a href="#">Home</a>
             <a href="#products">Products</a>
+            <a href="#three-rituals">Three Rituals</a>
             <a href="#gentle-cleanser-cards">Gentle Cleanser</a>
             <a href="#facial-toner-cards">Facial Toner</a>
             <a href="#facial-serum-cards">Facial Serum</a>
@@ -24,16 +26,15 @@
         </div>
     </nav>
 
-    <section class="hero">
+    <section class="hero"> 
         <div class="hero-content">
             <h1>Cleanse, Tone, Glow — The Perfect Trio for Radiant Skin</h1>
             <a href="https://www.tiktok.com/@skin.evie?_t=ZS-8wL337V5gLX&_r=1" class="cta-button" target="_blank">Shop Now</a>
         </div>
         <div class="image-container">
-            <img src="https://res.cloudinary.com/dy5u1ccgi/image/upload/v1746774153/_DSC1182-Enhanced-NR_vkxiqa.jpg" alt="Hero Image">
-            <img src="https://res.cloudinary.com/dy5u1ccgi/image/upload/v1746780852/_DSC1301-Enhanced-NR_1_yqszor.jpg" alt="Product 1">
-            <img src="https://res.cloudinary.com/dy5u1ccgi/image/upload/v1746777005/_DSC1318-Enhanced-NR_kkxwlq.jpg" alt="Product 2">
-            <img src="https://res.cloudinary.com/dy5u1ccgi/image/upload/v1746780492/_DSC1225-Enhanced-NR_detii6.jpg" alt="Product 3">
+            <img src="https://res.cloudinary.com/dy5u1ccgi/image/upload/v1747834720/1_3_frrtb1.jpg" alt="Hero Image">
+            <img src="https://res.cloudinary.com/dy5u1ccgi/image/upload/v1747834762/4_3_dtsybr.jpg" alt="Second Image">
+            <img src="https://res.cloudinary.com/dy5u1ccgi/image/upload/v1747834879/3_3_poqqqt.jpg" alt="Third Image">
         </div>
     </section>
 
@@ -44,14 +45,14 @@
             <p>Our products are certified and approved by the FDA, ensuring safety and quality for your skin.</p>
         </div>
         <div class="feature-card">
+            <i class="fas fa-star"></i>
+            <h3>Dermatologist Tested</h3>
+            <p>No parabens, phthalates, sulfates, harsh alcohols and artificial colors.</p>
+        </div>
+        <div class="feature-card">
             <i class="fas fa-heart"></i>
             <h3>Cruelty Free</h3>
             <p>Never tested on animals. Vegan friendly products</p>
-        </div>
-        <div class="feature-card">
-            <i class="fas fa-star"></i>
-            <h3>Dermatologist Tested</h3>
-            <p>Clinically proven safe for all skin types</p>
         </div>
     </section>
 
@@ -59,28 +60,98 @@
         <h2>Our Products</h2>
         <div class="products-container">
           <div class="product-card">
-                <img src="https://res.cloudinary.com/dy5u1ccgi/image/upload/v1746780492/_DSC1225-Enhanced-NR_detii6.jpg" alt="Gentle Cleanser">
+                <img src="https://res.cloudinary.com/dy5u1ccgi/image/upload/v1747110547/3_1_hztmbv.jpg" alt="Gentle Cleanser">
                 <div class="product-info">
-                    <h3>Evie Skin Gentle Cleanser</h3>
-                    <p>gentle facial cleanser is to cleanse the skin by removing dirt, oil, and impurities without stripping away natural moisture or irritating the skin. It is typically formulated for daily use, especially for sensitive, dry, or normal skin types, and helps maintain a healthy skin barrier.</p>
+                    <h3>Gentle Facial Cleanser</h3>
+                    <p>
+                        Elevate your cleansing ritual with this non-stripping, 
+                        dermatologist-formulated gentle facial cleanser. Powered by 
+                        ultra-mild surfactants—Decyl Glucoside and Coco Betaine—it 
+                        purifies the skin without compromising the integrity of the 
+                        moisture barrier.<br>
+                        Infused with a curated blend of active ingredients:
+                    </p>
+                    <button class="see-more-btn" onclick="toggleCleanserDetails()">See More</button>
+                    <div id="cleanser-details" style="display:none; margin-top: 1em; text-align: left;">
+                        <ul style="padding-left: 1.2em; margin-bottom: 0.7em;">
+                            <li><b>Niacinamide</b> – Clinically proven to brighten dullness and refine uneven skin tone</li>
+                            <li><b>Caprylic Triglyceride</b> – A lightweight emollient that restores softness and suppleness</li>
+                            <li><b>Rice Bran Oil</b> – Rich in antioxidants to promote a radiant, healthy-looking glow</li>
+                            <li><b>Panthenol (Pro-Vitamin B5)</b> – Calms, hydrates, and reinforces skin resilience</li>
+                        </ul>
+                        <div style="font-size: 0.98em; color: #444;">
+                            <b>The result:</b> skin that feels refreshed, balanced, and luxuriously smooth.
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="product-card">
-                <img src="https://res.cloudinary.com/dy5u1ccgi/image/upload/v1746780852/_DSC1301-Enhanced-NR_1_yqszor.jpg" alt="Facial Toner">
+                <img src="https://res.cloudinary.com/dy5u1ccgi/image/upload/v1746777721/_DSC1452-Enhanced-NR_rod6ds.jpg" alt="Facial Toner">
                 <div class="product-info">
-                    <h3>Evie Skin Facial Toner</h3>
-                    <p>Evie Skin Facial Toner is formulated to gently remove residual impurities, rebalance the skin’s pH, and prepare the skin for better absorption of moisturizers and serums. Enriched with skin-soothing ingredients, it helps refresh, hydrate, and refine the appearance of pores, leaving your skin clean, soft, and revitalized.</p>
+                    <h3>Facial Toner</h3>
+                    <p>
+                        Expertly formulated to gently sweep away residual impurities and rebalance the skin’s pH, this facial toner primes the skin for optimal absorption of serums and moisturizers. Infused with a potent blend of active botanicals and skin soothing ingredients:
+                    </p>
+                    <button class="see-more-btn" onclick="toggleTonerDetails()">See More</button>
+                    <div id="toner-details" style="display:none; margin-top: 1em; text-align: left;">
+                        <ul style="padding-left: 1.2em; margin-bottom: 0.7em;">
+                            <li><b>Niacinamide</b> – Visibly refines pores, boosts clarity, and enhances skin tone</li>
+                            <li><b>Centella Asiatica Extract</b> – Calms irritation and supports skin barrier repair</li>
+                            <li><b>Botanical Complex</b> – A synergistic blend of 7 plant-based extracts, including Aloe Vera, Peony Root, Scutellaria Baicalensis, and Saxifraga Extract, to hydrate, soothe, and restore balance</li>
+                        </ul>
+                        <div style="font-size: 0.98em; color: #444;">
+                            Alcohol-free and pH-balanced, this toner hydrates, calms redness, and leaves the skin soft, refreshed, and luminous—perfectly prepped for your final skincare step.
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="product-card">
-                <img src="https://res.cloudinary.com/dy5u1ccgi/image/upload/v1746777005/_DSC1318-Enhanced-NR_kkxwlq.jpg" alt="Facial Serum">
+                <img src="https://res.cloudinary.com/dy5u1ccgi/image/upload/v1747114756/3_2_ajc7g0.jpg" alt="Facial Serum">
                 <div class="product-info">
-                    <h3>Evie Skin Facial Serum</h3>
-                    <p>EEvie Skin Facial Serum is a lightweight, fast-absorbing skincare product formulated to help hydrate, nourish, and improve the appearance of the skin. It is designed to target specific skin concerns such as dullness, uneven texture, fine lines, and dehydration. Regular use helps to promote a smoother, healthier-looking, and radiant complexion. </p>
+                    <h3>Facial Serum</h3>
+                    <p>
+                        This lightweight, fast-absorbing, high-performance serum is expertly formulated to address visible signs of dullness, uneven texture, fine lines, and dehydration. Powered by a clinical blend of active ingredients:
+                    </p>
+                    <button class="see-more-btn" onclick="toggleSerumDetails()">See More</button>
+                    <div id="serum-details" style="display:none; margin-top: 1em; text-align: left;">
+                        <ul style="padding-left: 1.2em; margin-bottom: 0.7em;">
+                            <li><b>Niacinamide</b> – Refines texture, evens tone, and boosts clarity</li>
+                            <li><b>Glutathione & Tranexamic Acid</b> – Visibly reduce dark spots, pigmentation, and sun damage</li>
+                            <li><b>Aminopropyl Ascorbyl Phosphate (Vitamin C derivative)</b> – Brightens and protects with antioxidant power</li>
+                            <li><b>Ceramide Complex</b> – Reinforces the skin barrier for lasting hydration and resilience</li>
+                            <li><b>Botanical Extracts</b> – Alpine Rose, Geranium, and Thymus soothe and defend against environmental stressors</li>
+                        </ul>
+                        <div style="font-size: 0.98em; color: #444;">
+                            With continued use, skin appears visibly brighter, firmer, and more youthful—refreshed with a radiant, healthy glow.
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    </section>
+
+    <!-- Three Rituals Section -->
+    <section id="three-rituals" class="three-rituals">
+            <h2 style="text-align: center;">The Three Rituals. One Maximum Result.</h2>
+        <div class="three-rituals-container">
+            <div class="ritual-card">
+                <img src="https://res.cloudinary.com/dy5u1ccgi/image/upload/v1747110486/1_rbf19v.jpg" alt="Facial Cleanser">
+                <h3>CLEANSE</h3>
+            </div>
+            <div class="ritual-card">
+                <img src="https://res.cloudinary.com/dy5u1ccgi/image/upload/v1747114318/1_1_eqnvnk.jpg" alt="Facial Toner">
+                <h3>REPLENISH</h3>
+            </div>
+            <div class="ritual-card">
+                <img src="https://res.cloudinary.com/dy5u1ccgi/image/upload/v1747114812/1_2_unieta.jpg "alt="Facial Serum">
+                <h3>GLOW</h3>
+            </div>
+        </div>
+    </section>
+    <section class="three-rituals-description">
+       
 
     <section id="gentle-cleanser-cards" class="gentle-cleanser">
         <h2>How to Use the Gentle Cleanser</h2>
@@ -156,19 +227,26 @@
         <div class="footer-container">
             <div class="social-links">
                 <h3>Follow Us</h3>
-                <a href="https://www.tiktok.com/@skin.evie?_t=ZS-8wL337V5gLX&_r=1" target="_blank" class="social-icon">
-                    <i class="fab fa-tiktok"></i> TikTok
-                </a>
-                <a href="https://shopee.com" target="_blank" class="social-icon">
-                    <i class="fas fa-shopping-bag"></i> Shopee
-                </a>
-                <a href="https://www.lazada.com" target="_blank" class="social-icon">
-                    <i class="fas fa-store"></i> Lazada
-                </a>
+                <div class="links-row">
+                    <a href="https://www.tiktok.com/@skin.evie?_t=ZS-8wL337V5gLX&_r=1" target="_blank" class="social-icon">
+                        <i class="fab fa-tiktok"></i> TikTok
+                    </a>
+                    <a href="https://shopee.com" target="_blank" class="social-icon">
+                        <i class="fas fa-shopping-bag"></i> Shopee
+                    </a>
+                    <a href="https://www.lazada.com" target="_blank" class="social-icon">
+                        <i class="fas fa-store"></i> Lazada
+                    </a>
+                    <a href="https://www.facebook.com/" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f"></i> Facebook
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                </div>
             </div>
             <div class="contact-info">
                 <h3>Contact Us</h3>
-                <p><i class="fas fa-phone"></i> +639 311 091 536</p>
                 <p><i class="fas fa-envelope"></i> skinevie@gmail.com</p>
             </div>
             <div class="footer-note">
@@ -180,6 +258,42 @@
         function toggleMenu() {
             const navLinks = document.querySelector('.nav-links');
             navLinks.classList.toggle('show');
+        }
+
+        function toggleCleanserDetails() {
+            const details = document.getElementById('cleanser-details');
+            const btn = document.querySelector('.see-more-btn');
+            if (details.style.display === "none") {
+                details.style.display = "block";
+                btn.textContent = "See Less";
+            } else {
+                details.style.display = "none";
+                btn.textContent = "See More";
+            }
+        }
+
+        function toggleTonerDetails() {
+            const details = document.getElementById('toner-details');
+            const btn = document.querySelectorAll('.see-more-btn')[1];
+            if (details.style.display === "none") {
+                details.style.display = "block";
+                btn.textContent = "See Less";
+            } else {
+                details.style.display = "none";
+                btn.textContent = "See More";
+            }
+        }
+
+        function toggleSerumDetails() {
+            const details = document.getElementById('serum-details');
+            const btn = document.querySelectorAll('.see-more-btn')[2];
+            if (details.style.display === "none") {
+                details.style.display = "block";
+                btn.textContent = "See Less";
+            } else {
+                details.style.display = "none";
+                btn.textContent = "See More";
+            }
         }
     </script>
 </body>
