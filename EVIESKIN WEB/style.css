@@ -64,8 +64,8 @@ nav {
 }
 
 .logo img {
-    height: 150PX; /* Adjust the height as needed */
-    width: 200PX; /* Maintain aspect ratio */
+    height: 190PX; /* Adjust the height as needed */
+    width: 270PX; /* Maintain aspect ratio */
     display: block;
 }
 
@@ -378,10 +378,14 @@ footer {
 .social-links a .fa-tiktok { color: #fffafa; transition: color 0.3s; }
 .social-links a .fa-shopping-bag { color: #ee4d2d; transition: color 0.3s; }
 .social-links a .fa-store { color: #1a9cff; transition: color 0.3s; }
+.social-links a .fa-facebook-f { color: #1877f3; transition: color 0.3s; }
+.social-links a .fa-instagram { color: #e4405f; transition: color 0.3s; }
 
 .social-links a:hover .fa-tiktok { color: #69C9D0; }
 .social-links a:hover .fa-shopping-bag { color: #ee4d2d; }
 .social-links a:hover .fa-store { color: #1a9cff; }
+.social-links a:hover .fa-facebook-f { color: #1877f3; }
+.social-links a:hover .fa-instagram { color: #e4405f; }
 
 @media (max-width: 768px) {
     .footer-container {
@@ -583,3 +587,126 @@ footer {
     font-size: 1.5rem; /* Icon size */
     color: var(--accent-color); /* Icon color */
 }
+
+/* Remove previous overrides for .contact-info a */
+.contact-info a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover,
+.contact-info a:focus,
+.contact-info a:active {
+    color: var(--accent-color);
+    text-decoration: underline;
+    background: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+/* Elegant social links layout */
+.social-links {
+    display: flex;
+    flex-direction: column; /* Stack heading above links */
+    align-items: center;
+    gap: 16px; /* Space between heading and links */
+    margin-bottom: 20px;
+}
+
+.social-links h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #fff;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.social-links .links-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.social-links a {
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.04);
+    padding: 10px 22px;
+    border-radius: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
+.social-links a:hover {
+    background: #fff;
+    color: var(--accent-color);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+}
+
+.social-links i {
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.three-rituals h2 {
+    text-align: center;
+}
+
+/* Add to style.css */
+.three-rituals-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+.ritual-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 1.5rem;
+    text-align: center;
+    max-width: 300px;
+    flex: 1 1 250px;
+}
+.ritual-card img {
+    width: 100%;
+    max-width: 120px;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+.ritual-card h3 {
+    margin: 0.5rem 0;
+}
+
+.see-more-btn {
+    background: none;
+    color: #111;
+    border: 1px solid #111;
+    border-radius: 20px;
+    padding: 0.4em 1.2em;
+    font-size: 1em;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s;
+    outline: none;
+    margin-top: 0.7em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.see-more-btn:hover,
+.see-more-btn:focus {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+
