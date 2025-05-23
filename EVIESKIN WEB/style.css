@@ -483,14 +483,21 @@ footer {
     gap: 2rem;
 }
 
+.gentle-steps-list {
+    list-style: decimal inside;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1em;
+    margin: 0;
+    padding: 0 0 0 1.2em;
+}
+
 .gentle-step {
-    font-size: 1.25em;
     background: #faf7f2;
-    padding: 1.2em 1.5em;
-    border-radius: 12px;
+    border-radius: 10px;
+    padding: 1em 1.2em;
+    font-size: 1.08em;
     box-shadow: 0 1px 6px rgba(0,0,0,0.04);
-    max-width: 400px;
-    margin-bottom: 0;
     color: #222;
     font-weight: 500;
 }
