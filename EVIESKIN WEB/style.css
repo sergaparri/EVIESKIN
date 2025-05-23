@@ -437,41 +437,103 @@ footer {
     font-size: 3rem;
     color: var(--text-color);
     margin-bottom: 30px;
+    padding-top: 500px;
+    padding-bottom: 30px;
 }
 
 .gentle-cleanser-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    justify-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 60px 0;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .gentle-card {
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.gentle-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    border: none;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+    border-radius: 18px;
+    padding: 0;
+    max-width: 420px;
+    min-width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .gentle-card img {
+    max-width: 350px;
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    border-radius: 18px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+    margin-bottom: 0;
 }
 
-.gentle-card p {
-    font-size: 1.2rem; /* Increased font size for better readability */
-    color: #555;
-    line-height: 1.8; /* Improved line spacing */
+.gentle-steps {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 280px;
+    max-width: 500px;
+    gap: 2rem;
+}
+
+.gentle-step {
+    font-size: 1.25em;
+    background: #faf7f2;
+    padding: 1.2em 1.5em;
+    border-radius: 12px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+    max-width: 400px;
+    margin-bottom: 0;
+    color: #222;
+    font-weight: 500;
+}
+
+.gentle-sizes {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 1.5em;
+}
+
+.gentle-size-btn {
+    background: none;
+    border: 2px solid #111;
+    color: #111;
+    padding: 8px 26px;
+    border-radius: 6px;
+    font-size: 1.05rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.gentle-size-btn.active,
+.gentle-size-btn:hover {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+}
+
+@media (max-width: 900px) {
+    .gentle-cleanser-container {
+        flex-direction: column;
+        gap: 32px;
+        padding: 30px 0;
+    }
+    .gentle-card img {
+        max-width: 220px;
+    }
+    .gentle-steps {
+        max-width: 100%;
+    }
 }
 
 .facial-toner {
@@ -658,55 +720,101 @@ footer {
 
 .three-rituals h2 {
     text-align: center;
+    padding-top: 400px;
 }
 
 /* Add to style.css */
 .three-rituals-container {
     display: flex;
-    gap: 2rem;
+    gap: 6.5rem;
     justify-content: center;
     margin-top: 2rem;
     flex-wrap: wrap;
 }
 .ritual-card {
     background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-    padding: 1.5rem;
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+    padding: 2.5rem 2rem 2rem 2rem;
     text-align: center;
-    max-width: 300px;
-    flex: 1 1 250px;
-}
-.ritual-card img {
-    width: 100%;
-    max-width: 120px;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-}
-.ritual-card h3 {
-    margin: 0.5rem 0;
+    max-width: 340px;
+    min-width: 260px;
+    flex: 1 1 320px;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.see-more-btn {
-    background: none;
-    color: #111;
-    border: 1px solid #111;
-    border-radius: 20px;
-    padding: 0.4em 1.2em;
-    font-size: 1em;
-    font-family: inherit;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s;
-    outline: none;
-    margin-top: 0.7em;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+.ritual-card img {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
 }
-.see-more-btn:hover,
-.see-more-btn:focus {
-    background: #111;
-    color: #fff;
-    border-color: #111;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+
+.ritual-card h3 {
+    margin: 0.7rem 0 0 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* From Uiverse.io by Gaurav-WebDev */
+.button {
+  height: 50px;
+  width: 200px;
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid #252525;
+  overflow: hidden;
+  border-radius: 30px;
+  color: #333;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-txt {
+  z-index: 1;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.type1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  background-color: #333;
+  border-radius: 30px;
+  visibility: hidden;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+}
+
+.button:hover {
+  box-shadow: 1px 1px 200px #252525;
+  color: #fff;
+  border: none;
+}
+
+.type1:hover::after {
+  visibility: visible;
+  transform: scale(100) translateX(2px);
+}
+
+.ritual-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.15s;
+}
+.ritual-card-link:hover .ritual-card,
+.ritual-card-link:focus .ritual-card {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    transform: translateY(-6px) scale(1.03);
+}
+.ritual-card {
+    cursor: pointer;
 }
 
 
