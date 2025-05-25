@@ -174,6 +174,13 @@ nav {
     line-height: 1.2;
 }
 
+.hero-content h1 br {
+    line-height: 0;
+    margin: 0;
+    display: block;
+    content: "";
+}
+
 .cta-button {
     display: inline-block;
     background: var(--accent-color);
@@ -314,78 +321,66 @@ footer {
 
 .footer-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 1.2em;
+    padding: 2em 1em 1em 1em;
+    background: #000; /* Black background */
 }
 
 .footer-container h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
-    color: #ffffff;
+    color: #fff; /* White heading */
 }
 
-.social-links,
 .contact-info {
-    flex: 1;
-    min-width: 250px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #333; /* Neutral text color */
+    text-align: center;
 }
 
-.social-links a,
 .contact-info p {
-    font-size: 1.2rem;
-    color: #ffffff;
-    text-decoration: none;
     margin: 10px 0;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    color: #fff; /* Ensure email is visible on black */
+    font-weight: 500;
+    font-size: 1.1rem;
+    word-break: break-all; /* Prevent overflow on small screens */
 }
 
-.social-links a:hover,
-.contact-info p:hover {
-    color: var(--accent-color); /* Add hover effect with accent color */
-}
-
-.social-links i,
 .contact-info i {
     font-size: 1.5rem;
-    color: var(--accent-color); /* Accent color for icons */
+    color: #fff; /* White icon for envelope */
 }
 
-.footer-note {
-    flex-basis: 100%;
-    margin-top: 20px;
-    font-size: 1rem;
-    color: #aaaaaa; /* Subtle text color for the footer note */
-}
-
-/* Social Links Hover: Brand Colors */
-.social-links a {
-    font-size: 1.2rem;
-    color: #ffffff;
-    text-decoration: none;
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+.contact-info a {
+    color: #fff; /* Make email link white */
+    text-decoration: underline;
     transition: color 0.3s;
+    word-break: break-all;
 }
 
-.social-links a .fa-tiktok { color: #fffafa; transition: color 0.3s; }
-.social-links a .fa-shopping-bag { color: #ee4d2d; transition: color 0.3s; }
-.social-links a .fa-store { color: #1a9cff; transition: color 0.3s; }
-.social-links a .fa-facebook-f { color: #1877f3; transition: color 0.3s; }
-.social-links a .fa-instagram { color: #e4405f; transition: color 0.3s; }
+.contact-info a:hover,
+.contact-info a:focus,
+.contact-info a:active {
+    color: #6c63ff; /* Accent color on hover */
+    text-decoration: underline;
+    background: none;
+    box-shadow: none;
+    cursor: pointer;
+}
 
-.social-links a:hover .fa-tiktok { color: #69C9D0; }
-.social-links a:hover .fa-shopping-bag { color: #ee4d2d; }
-.social-links a:hover .fa-store { color: #1a9cff; }
-.social-links a:hover .fa-facebook-f { color: #1877f3; }
-.social-links a:hover .fa-instagram { color: #e4405f; }
+/* Social icon brand colors on hover */
+.social-icon:hover .fa-tiktok { color: #010101; }
+.social-icon:hover .fa-shopping-bag { color: #ee4d2d; }
+.social-icon:hover .fa-store { color: #1a9dd9; }
+.social-icon:hover .fa-facebook-f { color: #1877f3; }
+.social-icon:hover .fa-instagram { color: #e1306c; }
 
 @media (max-width: 768px) {
     .footer-container {
@@ -543,6 +538,99 @@ footer {
     }
 }
 
+/* Responsive adjustments for 425px and below */
+@media (max-width: 425px) {
+    .gentle-cleanser-container,
+    .facial-toner .gentle-cleanser-container,
+    .facial-serum .gentle-cleanser-container {
+        flex-direction: column;
+        gap: 24px;
+        padding: 24px 0;
+        align-items: stretch;
+    }
+
+    .gentle-card,
+    .gentle-card img {
+        max-width: 100%;
+        min-width: 0;
+        width: 100%;
+    }
+
+    .gentle-card img {
+        max-width: 220px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .gentle-steps {
+        max-width: 100%;
+        min-width: 0;
+        padding: 0 4vw;
+        gap: 1rem;
+    }
+
+    .gentle-step {
+        font-size: 1em;
+        padding: 0.9em 1em;
+    }
+
+    .gentle-sizes {
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: flex-start;
+    }
+
+    .three-rituals-container {
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 1.2rem;
+    }
+
+    .ritual-card {
+        max-width: 95vw;
+        min-width: 0;
+        padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+    }
+
+    .ritual-card img {
+        max-width: 140px;
+    }
+
+    .ritual-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        padding: 40px 4vw;
+        gap: 20px;
+    }
+
+    .feature-card {
+        padding: 20px;
+        min-height: unset;
+    }
+
+    .products-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 10px 0;
+    }
+
+    .product-card {
+        padding: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 10px 18px;
+    }
+}
+
 .facial-toner {
     padding: 60px 8%;
     background-color: #ffffff; /* White background for minimalistic design */
@@ -649,25 +737,29 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px; /* Space between icon and text */
+    gap: 10px;
+    color: #fff; /* Ensure email is visible on black */
+    font-weight: 500;
+    font-size: 1.1rem;
+    word-break: break-all; /* Prevent overflow on small screens */
 }
 
 .contact-info i {
-    font-size: 1.5rem; /* Icon size */
-    color: var(--accent-color); /* Icon color */
+    font-size: 1.5rem;
+    color: #fff; /* White icon for envelope */
 }
 
-/* Remove previous overrides for .contact-info a */
 .contact-info a {
-    color: inherit;
-    text-decoration: none;
+    color: #fff; /* Make email link white */
+    text-decoration: underline;
     transition: color 0.3s;
+    word-break: break-all;
 }
 
 .contact-info a:hover,
 .contact-info a:focus,
 .contact-info a:active {
-    color: var(--accent-color);
+    color: #6c63ff; /* Accent color on hover */
     text-decoration: underline;
     background: none;
     box-shadow: none;
@@ -822,6 +914,65 @@ footer {
 }
 .ritual-card {
     cursor: pointer;
+}
+
+@media (max-width: 425px) {
+  .image-container {
+    width: 100vw;
+    max-width: 100vw;
+    height: 52vw; /* Adjust as needed for aspect ratio */
+    min-height: 180px;
+    overflow: hidden; /* Prevent scrolling */
+    display: block;   /* Remove flex */
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10), 0 1.5px 8px rgba(180,180,180,0.08); /* Soft shadow for white bg */
+  }
+  .image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    max-height: 100%;
+    object-fit: contain; /* Show full image */
+    border-radius: 10px;
+    opacity: 0;
+    animation: slideShow 9s infinite;
+    transition: opacity 1s ease-in-out;
+  }
+  .image-container img:nth-child(1) { animation-delay: 0s; }
+  .image-container img:nth-child(2) { animation-delay: 3s; }
+  .image-container img:nth-child(3) { animation-delay: 6s; }
+}
+
+/* Make hero main title much bigger than sub title */
+.hero-main-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    display: block;
+    margin-bottom: 0; /* Remove space below main title */
+}
+
+.hero-sub-title {
+    font-size: 2.2rem;
+    font-weight: 400;
+    display: block;
+    margin-top: 0;    /* No space above sub title */
+    margin-bottom: 0; /* No extra space below */
+}
+
+@media (max-width: 600px) {
+    .hero-main-title {
+        font-size: 2.1rem;
+    }
+    .hero-sub-title {
+        font-size: 1rem;
+    }
 }
 
 
