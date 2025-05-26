@@ -422,6 +422,53 @@ footer {
     }
 }
 
+/* Fix nav-links hamburger menu for 425px and below */
+@media (max-width: 425px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 100px;
+        right: 0;
+        width: 100vw;
+        max-width: 100vw;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+        z-index: 2000;
+        padding: 0;
+        margin: 0;
+        border-radius: 0 0 12px 12px;
+        transition: max-height 0.3s;
+    }
+    .nav-links.show {
+        display: flex;
+        max-height: 80vh;
+    }
+    .nav-links a {
+        font-size: 1.1rem;
+        padding: 18px 0;
+        border-bottom: 1px solid #eee;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        border-left: none;
+    }
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 24px;
+        top: 98px; /* Increased from 18px to move it further down */
+        z-index: 2100;
+        padding-left: 6px; /* Add padding to align with nav links */
+    }
+    nav {
+        padding: 36px 0 0 0; /* Increase top padding to match hamburger position */
+    }
+}
+
 .gentle-cleanser {
     padding: 60px 8%;
     background-color: #ffffff; /* White background for gentle cleanser section */
@@ -552,6 +599,83 @@ footer {
 
 /* Responsive adjustments for 425px and below */
 @media (max-width: 425px) {
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 2vw;
+        margin-top: 260px;
+        height: auto;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-main-title {
+        font-size: 2.1rem;
+    }
+
+    .hero-sub-title {
+        font-size: 1rem;
+    }
+
+    .image-container {
+        width: 100vw;
+        max-width: 100vw;
+        height: 52vw; /* Adjust as needed for aspect ratio */
+        min-height: 180px;
+        overflow: hidden;
+        display: block;
+        padding: 0;
+        box-sizing: border-box;
+        position: relative;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.10), 0 1.5px 8px rgba(180,180,180,0.08);
+        border-radius: 10px;
+        margin: 0 auto 1.5rem auto;
+    }
+
+    .image-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        max-width: 100vw;
+        max-height: 100%;
+        object-fit: contain;
+        border-radius: 10px;
+        opacity: 0;
+        animation: slideShow 9s infinite;
+        transition: opacity 1s ease-in-out;
+    }
+    .image-container img:nth-child(1) { animation-delay: 0s; }
+    .image-container img:nth-child(2) { animation-delay: 3s; }
+    .image-container img:nth-child(3) { animation-delay: 6s; }
+
+    .features {
+        grid-template-columns: 1fr;
+        padding: 40px 4vw;
+        gap: 20px;
+    }
+
+    .feature-card {
+        padding: 20px;
+        min-height: unset;
+    }
+
+    .products-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 10px 0;
+    }
+
+    .product-card {
+        padding: 10px;
+    }
+
     .gentle-cleanser-container,
     .facial-toner .gentle-cleanser-container,
     .facial-serum .gentle-cleanser-container {
@@ -592,49 +716,30 @@ footer {
         justify-content: flex-start;
     }
 
+    .gentle-size-btn {
+        font-size: 0.93em;
+        padding: 0.18em 0.7em;
+    }
+
     .three-rituals-container {
         flex-direction: column;
         gap: 2rem;
         margin-top: 1.2rem;
+        align-items: center;      /* Center the ritual cards horizontally */
+        justify-content: center;  /* Center the ritual cards vertically if needed */
     }
-
     .ritual-card {
+        margin-left: auto;
+        margin-right: auto;
         max-width: 95vw;
         min-width: 0;
         padding: 1.2rem 0.7rem 1.2rem 0.7rem;
     }
-
     .ritual-card img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
         max-width: 140px;
-    }
-
-    .ritual-card h3 {
-        font-size: 1.3rem;
-    }
-
-    .features {
-        grid-template-columns: 1fr;
-        padding: 40px 4vw;
-        gap: 20px;
-    }
-
-    .feature-card {
-        padding: 20px;
-        min-height: unset;
-    }
-
-    .products-container {
-        grid-template-columns: 1fr;
-        gap: 18px;
-        padding: 10px 0;
-    }
-
-    .product-card {
-        padding: 10px;
-    }
-
-    .hero-content h1 {
-        font-size: 2rem;
     }
 
     .cta-button {
@@ -998,4 +1103,3 @@ footer {
 .product-card p {
     text-align: justify;
 }
-
