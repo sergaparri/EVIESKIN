@@ -119,7 +119,7 @@ nav {
 
 .image-container {
     flex: 1;
-    height: 72vh;
+    height: 78vh;
     position: relative;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -608,18 +608,40 @@ footer {
     }
 
     .hero-content {
-        padding-right: 0;
-        width: 100%;
-        text-align: left;
-        margin-bottom: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 1.5em; /* Optional: adds space below nav */
+        padding-left: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.7em;
+    }
+
+    .cta-button {
+        margin-top: 1em;
+        margin-bottom: 1em;
     }
 
     .hero-main-title {
-        font-size: 2.1rem;
+        font-size: 3.2rem;
+        font-weight: 700;
+        line-height: 1.1;
+        letter-spacing: -1px;
+        display: block;
+        margin-bottom: 0; /* Remove space below main title */
     }
 
     .hero-sub-title {
-        font-size: 1rem;
+        font-size: 2.2rem;
+        font-weight: 400;
+        display: block;
+        margin-top: 0;    /* No space above sub title */
+        margin-bottom: 0; /* No extra space below */
     }
 
     .image-container {
@@ -1035,10 +1057,10 @@ footer {
 
 @media (max-width: 425px) {
   .image-container {
-    width: 100vw;
+    width: 80vw;
     max-width: 100vw;
-    height: 52vw; /* Adjust as needed for aspect ratio */
-    min-height: 180px;
+    height: 180vw; /* Adjust as needed for aspect ratio */
+    min-height: 300px;
     overflow: hidden; /* Prevent scrolling */
     display: block;   /* Remove flex */
     padding: 0;
@@ -1054,7 +1076,7 @@ footer {
     height: 100%;
     max-width: 100vw;
     max-height: 100%;
-    object-fit: contain; /* Show full image */
+    object-fit: fill; /* Show full image */
     border-radius: 10px;
     opacity: 0;
     animation: slideShow 9s infinite;
