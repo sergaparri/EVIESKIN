@@ -615,16 +615,34 @@ footer {
         text-align: center;
         margin-top: 1.5em; /* Optional: adds space below nav */
         padding-left: 30px;
+        padding-right: 0;
     }
 
     .hero-content h1 {
         font-size: 1.5rem;
         margin-bottom: 0.7em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        padding-left: 30px;
+
     }
 
     .cta-button {
         margin-top: 1em;
         margin-bottom: 1em;
+    }
+
+    .hero-main-title,
+    .hero-sub-title {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .hero-main-title {
