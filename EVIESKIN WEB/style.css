@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+}           
+html {
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -11,7 +14,6 @@
     --accent-color: #000000; /* Accent color remains black */
     --text-color: #333; /* Text color remains dark gray */
 }
-
 nav {
     display: flex;
     justify-content: space-between;
@@ -1186,4 +1188,13 @@ footer {
     max-width: 190px;
     height: auto;
   }
+}
+
+.footer-container .fa-envelope {
+    color: #ea4335; /* Gmail red */
+    border-radius: 4px;
+    padding: 4px 7px;         /* Increased padding for a bigger icon background */
+    font-size: 2em;           /* Increased icon size */
+    vertical-align: middle;
+    box-shadow: 0 2px 6px rgba(234,67,53,0.12);
 }
