@@ -382,6 +382,34 @@ footer {
 .social-icon:hover .fa-facebook-f { color: #1877f3; }
 .social-icon:hover .fa-instagram { color: #e1306c; }
 
+.social-icon {
+    position: relative;
+}
+
+.social-icon::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 110%;
+    transform: translateX(-50%) scale(0.8);
+    background: #222;
+    color: #fff;
+    padding: 5px 14px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s, transform 0.2s;
+    z-index: 10;
+}
+
+.social-icon.tiktok:hover::after { content: 'TikTok'; opacity: 1; transform: translateX(-50%) scale(1.05);}
+.social-icon.shopee:hover::after { content: 'Shopee'; opacity: 1; transform: translateX(-50%) scale(1.05);}
+.social-icon.lazada:hover::after { content: 'Lazada'; opacity: 1; transform: translateX(-50%) scale(1.05);}
+.social-icon.facebook:hover::after { content: 'Facebook'; opacity: 1; transform: translateX(-50%) scale(1.05);}
+.social-icon.instagram:hover::after { content: 'Instagram'; opacity: 1; transform: translateX(-50%) scale(1.05);}
+
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
@@ -557,7 +585,7 @@ footer {
     border: 1.5px solid #bbb;
     color: #222;
     padding: 0.22em 0.95em;
-    border-radius: 7px;      /* Less rounded, more squared */
+    border-radius: 7px;      
     font-size: 0.97em;
     margin: 0.08em 0.08em;
     font-weight: 500;
@@ -614,7 +642,7 @@ footer {
         justify-content: center;
         text-align: center;
         margin-top: 1.5em; /* Optional: adds space below nav */
-        padding-left: 30px;
+        padding-left: 35px;   /* Add or adjust this line */
         padding-right: 0;
     }
 
