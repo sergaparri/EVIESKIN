@@ -473,6 +473,7 @@ footer {
     .nav-links.show {
         display: flex;
         max-height: 80vh;
+        padding-top: 50px;
     }
     .nav-links a {
         font-size: 1.1rem;
