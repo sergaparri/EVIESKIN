@@ -66,8 +66,8 @@ nav {
 }
 
 .logo img {
-    height: 190PX; /* Adjust the height as needed */
-    width: 270PX; /* Maintain aspect ratio */
+    height: 200PX; /* Adjust the height as needed */
+    width: 290PX; /* Maintain aspect ratio */
     display: block;
 }
 
