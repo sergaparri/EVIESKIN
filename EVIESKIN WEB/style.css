@@ -781,16 +781,23 @@ footer {
         padding: 0.9em 1em;
     }
 
-    .gentle-sizes {
-        flex-wrap: wrap;
-        gap: 8px;
-        justify-content: flex-start;
-    }
-
-    .gentle-size-btn {
-        font-size: 0.93em;
-        padding: 0.18em 0.7em;
-    }
+  .gentle-sizes {
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .gentle-size-btn {
+    font-size: 0.93em;
+    padding: 0.18em 0.7em;
+    min-width: 120px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 6px;
+    text-align: left;
+    white-space: normal;
+    word-break: break-word;
+  }
 
     .three-rituals-container {
         flex-direction: column;
