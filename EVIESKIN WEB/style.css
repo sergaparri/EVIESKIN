@@ -113,7 +113,7 @@ nav {
     background: linear-gradient(45deg, var(--secondary-color), #ffffff);
     display: flex;
     align-items: center;
-    padding: 0 8%;
+    padding: 0 12%;
     margin-top: 120px;
     position: relative;
     background-color: #ffffff; /* White background for hero section */
@@ -1145,7 +1145,7 @@ footer {
 
 /* Make hero main title much bigger than sub title */
 .hero-main-title {
-    font-size: 3.2rem;
+    font-size: 4rem;
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: -1px;
@@ -1154,8 +1154,8 @@ footer {
 }
 
 .hero-sub-title {
-    font-size: 2.2rem;
-    font-weight: 400;
+    font-size: 2.5rem;
+    font-weight: 100;
     display: block;
     margin-top: 0;    /* No space above sub title */
     margin-bottom: 0; /* No extra space below */
@@ -1206,3 +1206,5 @@ footer {
     vertical-align: middle;
     box-shadow: 0 2px 6px rgba(234,67,53,0.12);
 }
+
+
