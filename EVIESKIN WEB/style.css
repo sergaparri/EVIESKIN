@@ -270,7 +270,7 @@ nav {
 }
 
 .platforms-container a:nth-child(2):hover .platform-icon {
-  color: #5dc1f0; /* Lazada blue */
+  color: #5dc; /* Lazada blue */
 }
 
 .platforms-container a:nth-child(3):hover .platform-icon {
