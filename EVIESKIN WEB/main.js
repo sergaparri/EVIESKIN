@@ -77,3 +77,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Toggle active class on shop-now-button for touch devices
+const shopNowButton = document.querySelector('.shop-now-button');
+if (shopNowButton) {
+    shopNowButton.addEventListener('click', function (e) {
+        // Allow clicks on platform links to work normally
+        if (e.target.closest('a')) {
+            return; // Do not prevent default or toggle active class
+        }
+        e.preventDefault();
+        this.classList.toggle('active');
+    });
+}
+
+

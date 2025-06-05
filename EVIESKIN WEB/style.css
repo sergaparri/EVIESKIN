@@ -85,6 +85,7 @@ nav {
 @media (max-width: 768px) {
     .hamburger {
         display: block; /* Show the hamburger icon on small screens */
+        z-index: 2200; /* Ensure hamburger is above nav-links */
     }
 }
 
@@ -183,29 +184,115 @@ nav {
     content: "";
 }
 
-.cta-button {
-    display: inline-block;
-    background: var(--accent-color);
-    color: #fff;
-    padding: 14px 36px;
-    border-radius: 30px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-decoration: none; /* Remove underline */
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.3s;
-    border: none;
-    outline: none;
-    cursor: pointer;
+/* NEW SHOP NOW BUTTON STYLES */
+.shop-now-button {
+  height: 4em;
+  width: 15em;
+  border: none;
+  border-radius: 40px;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  overflow: visible; /* Changed from hidden to visible */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  margin-top: 20px;
 }
 
-.cta-button:hover {
-    background: #333;
-    color: #fff;
-    transform: translateY(-3px) scale(1.04);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    text-decoration: none; /* Ensure no underline on hover */
+.shop-now-button:hover,
+.shop-now-button.active {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
+
+.shop-text {
+  z-index: 1;
+  display: inline-block;
+  background-color: black;
+  height: 3em;
+  width: 11.5em;
+  border-radius: 25px;
+  color: #fff;
+  line-height: 55px;
+  font-size: 18px;
+  letter-spacing: 3px;
+  transition: all 0.5s;
+  font-weight: 600;
+  position: relative;
+}
+
+.platforms-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+}
+
+.platforms-container a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 8px;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.platforms-container a:hover {
+  transform: scale(1.15);
+}
+
+.platform-icon {
+  color: #333;
+  transition: color 0.3s ease;
+  width: 35px;
+  height: 35px;
+}
+
+.shop-now-button .social-icon i {
+  font-size: 35px;
+  vertical-align: middle;
+}
+
+.platforms-container a:nth-child(1):hover .platform-icon {
+  color: #000000; /* TikTok black */
+}
+
+.platforms-container a:nth-child(2):hover .platform-icon {
+  color: #5dc1f0; /* Lazada blue */
+}
+
+.platforms-container a:nth-child(3):hover .platform-icon {
+  color: #ee4d2d; /* Shopee orange */
+}
+
+.shop-now-button:hover .shop-text,
+.shop-now-button.active .shop-text {
+  opacity: 0;
+  transform: scale(0.5);
+  width: 0;
+}
+
+.shop-now-button:hover .platforms-container,
+.shop-now-button.active .platforms-container {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+
 
 .features {
     padding: 100px 8%;
@@ -630,6 +717,65 @@ footer {
     }
 }
 
+/* New media query for responsiveness between 1440px and 769px */
+@media (max-width: 1440px) and (min-width: 770px) {
+    body {
+        font-size: 1rem;
+    }
+    nav {
+        padding: 15px 40px;
+    }
+    .hero {
+        padding: 0 8%;
+        margin-top: 100px;
+    }
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 1.1rem;
+    }
+    .features {
+        padding: 80px 6%;
+        gap: 30px;
+    }
+    .feature-card {
+        padding: 30px;
+        min-height: 250px;
+    }
+    .products {
+        padding: 50px 6%;
+    }
+    .products-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+    .product-card {
+        padding: 12px;
+    }
+    .product-info h3 {
+        font-size: 1.7rem;
+    }
+    .product-info p {
+        font-size: 1.1rem;
+    }
+    .gentle-cleanser-container {
+        max-width: 1000px;
+        padding: 40px 0;
+    }
+    .gentle-steps {
+        max-width: 450px;
+    }
+    .gentle-size-btn {
+        font-size: 0.95em;
+        padding: 0.2em 0.85em;
+    }
+    footer {
+        padding: 30px 6%;
+    }
+}
+
 /* Responsive adjustments for 425px and below */
 @media (max-width: 425px) {
     .hero {
@@ -638,6 +784,10 @@ footer {
         padding: 0 2vw;
         margin-top: 220px;
         height: auto;
+    }
+
+    .shop-now-button {
+        margin-bottom: 20px;
     }
 
     .hero-content {
