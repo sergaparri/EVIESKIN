@@ -86,6 +86,7 @@ nav {
     .hamburger {
         display: block; /* Show the hamburger icon on small screens */
         z-index: 2200; /* Ensure hamburger is above nav-links */
+        
     }
 }
 
@@ -500,11 +501,17 @@ footer {
 .social-icon.instagram:hover::after { content: 'Instagram'; opacity: 1; transform: translateX(-50%) scale(1.05);}
 
 @media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Adjust base font size for smaller screens */
+    }
     .footer-container {
         flex-direction: column;
         text-align: center;
     }
 }
+    .product-card p {
+        font-size: 13px;
+    }
 
 @media (max-width: 768px) {
     .hamburger {
@@ -527,6 +534,7 @@ footer {
     .nav-links.show {
         display: flex;
         max-height: 80vh; /* Limit height to 80% of the viewport */
+        padding-top: 80px;
     }
 
     .nav-links a {
@@ -755,7 +763,7 @@ footer {
         padding: 12px;
     }
     .product-info h3 {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
     .product-info p {
         font-size: 1.1rem;
@@ -773,6 +781,27 @@ footer {
     }
     footer {
         padding: 30px 6%;
+    }
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+    #products h2 {
+        font-size: 24px;
+    }
+    #three-rituals h2 {
+        font-size: 2rem !important;
+    }
+    #gentle-cleanser-cards h2 {
+        font-size: 2.2rem;
+    }
+    #facial-toner-cards h2 {
+        font-size: 2rem;
+    }
+    #facial-serum-cards h2 {
+        font-size: 2rem;
+    }
+    .three-rituals .ritual-card h3 {
+        font-size: 1.5rem;
     }
 }
 
@@ -1358,5 +1387,4 @@ footer {
     vertical-align: middle;
     box-shadow: 0 2px 6px rgba(234,67,53,0.12);
 }
-
 
