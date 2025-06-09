@@ -400,7 +400,7 @@ nav {
 }
 
 .product-info p {
-    font-size: 1.3rem; /* Increased font size for descriptions */
+    font-size: 1rem; /* Increased font size for descriptions */
     color: #555; /* Slightly darker text color */
     line-height: 1.8; /* Improved line spacing for readability */
     margin: 0;
@@ -772,7 +772,7 @@ footer {
         font-size: 1.5rem;
     }
     .product-info p {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
     .gentle-cleanser-container {
         max-width: 1000px;
@@ -1388,6 +1388,30 @@ footer {
     margin: 0 auto;
     max-width: 190px;
     height: auto;
+  }
+  .product-info p {
+    font-size: 1rem;
+  }
+  .product-info h3 {
+    font-size: 1.5rem;
+  }
+  .feature-card p{
+    font-size: 1rem; /* Adjusted for smaller screens */
+  }
+  .feature-card h3 {
+    font-size: 1.5rem; /* Adjusted for smaller screens */
+  }
+  .three-rituals h2 {
+    font-size: 1.1rem; /* Adjusted for smaller screens */
+  }
+  .gentle-cleanser h2 {
+    font-size: 1.9rem; /* Adjusted for smaller screens */
+  }
+  .facial-toner h2 {
+    font-size: 1.9rem; /* Adjusted for smaller screens */
+  }
+  .facial-serum h2 {
+    font-size: 1.9rem; /* Adjusted for smaller screens */
   }
 }
 
