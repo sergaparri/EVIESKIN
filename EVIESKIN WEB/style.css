@@ -81,6 +81,14 @@ nav {
     position: relative; /* Optional for better positioning */
 }
 
+@media (min-width: 1441px) and (max-width: 2000px) {
+    .product-card p {
+        font-size: 3.8rem;
+    }
+}
+
+
+
 /* Show Hamburger Icon on Small Screens */
 @media (max-width: 768px) {
     .hamburger {
@@ -509,9 +517,6 @@ footer {
         text-align: center;
     }
 }
-    .product-card p {
-        font-size: 13px;
-    }
 
 @media (max-width: 768px) {
     .hamburger {
@@ -710,7 +715,6 @@ footer {
     box-shadow: 0 2px 8px rgba(0,0,0,0.10);
     outline: none;
 }
-
 @media (max-width: 900px) {
     .gentle-cleanser-container {
         flex-direction: column;
@@ -724,6 +728,8 @@ footer {
         max-width: 100%;
     }
 }
+
+
 
 /* New media query for responsiveness between 1440px and 769px */
 @media (max-width: 1440px) and (min-width: 770px) {
@@ -783,7 +789,7 @@ footer {
         padding: 30px 6%;
     }
     .nav-links a {
-        font-size: 0.9rem;
+        font-size: 1.2rem;
     }
     #products h2 {
         font-size: 24px;
@@ -975,7 +981,7 @@ footer {
     width: 100%;
     box-sizing: border-box;
     margin-bottom: 6px;
-    text-align: center;
+    text-align: center; /* Center text in buttons */
     white-space: normal;
     word-break: break-word;
   }
@@ -1324,10 +1330,10 @@ footer {
   .image-container img:nth-child(3) { animation-delay: 6s; }
 }
    .feature-card h3 {
-    font-size: 1.3rem; /* Increased font size for the title */
+    font-size: 1.9rem; /* Increased font size for the title */
 }
    .feature-card p {
-    font-size: 0.9rem;
+    font-size: 1.3rem;
 }
 
 /* Make hero main title much bigger than sub title */
@@ -1393,4 +1399,6 @@ footer {
     vertical-align: middle;
     box-shadow: 0 2px 6px rgba(234,67,53,0.12);
 }
+
+
 
