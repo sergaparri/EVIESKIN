@@ -789,7 +789,7 @@ footer {
         padding: 30px 6%;
     }
     .nav-links a {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     #products h2 {
         font-size: 24px;
@@ -1338,7 +1338,7 @@ footer {
 
 /* Make hero main title much bigger than sub title */
 .hero-main-title {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: -1px;
